@@ -13,7 +13,7 @@ function getComputerChoice() {
         }
 
 //      If the number stored in choice is equal to 2:
-        if (choice === 2) {
+        else if (choice === 2) {
 
 //          Set choice variable to "Paper" and return it
             choice = "Paper";
