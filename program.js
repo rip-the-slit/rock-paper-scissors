@@ -73,14 +73,21 @@ function getHumanChoice() {
 // console.log(getHumanChoice())
 
 // Create two variables with the value of 0 to keep track of the player and computer scores
+
+// Create function to keep track of scores and rounds
+function playGame() {
+
 let computerScore = 0;
 let humanScore = 0;
-
 
 // Create function to play round that takes the human and computer choices as arguments
 function playRound(humanChoice, computerChoice) {
 
 //      If human and computer choices are the same:
+        if (humanChoice === null) {
+                console.log("Enter a valid choice")
+                return;
+        }
         if (humanChoice === computerChoice) {
 
 //              Display msg declaring a match
@@ -155,3 +162,29 @@ function playRound(humanChoice, computerChoice) {
                 }
         }
 }
+
+//      As long as the round count is less than 5
+        for (let round = 0; round < 5; round++) {
+
+//              Call the playRound function
+                playRound(getHumanChoice(), getComputerChoice())
+        }
+
+//      If the humanScore is bigger than the computerScore:
+        if (humanScore > computerScore) {
+
+//              Show msg declaring the user as the winner
+                console.log(`You won! ${humanScore} vs. ${computerScore}`)
+        }
+
+        else if (humanScore === computerScore) {
+                console.log("It's a definitive tie.")
+        }
+//      Otherwise:
+        else {
+//              Show msg declaring the computer as the winner
+                console.log(`You lost! ${humanScore} vs. ${computerScore}`)
+        }
+}
+
+playGame()
