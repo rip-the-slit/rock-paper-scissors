@@ -76,3 +76,82 @@ function getHumanChoice() {
 let computerScore = 0;
 let humanScore = 0;
 
+
+// Create function to play round that takes the human and computer choices as arguments
+function playRound(humanChoice, computerChoice) {
+
+//      If human and computer choices are the same:
+        if (humanChoice === computerChoice) {
+
+//              Display msg declaring a match
+                console.log("It's a tie!")
+                return;
+        }
+
+//      If human choice is "Rock":
+        else if (humanChoice === "Rock") {
+
+//              And the computer choice is "Scissors":
+                if (computerChoice === "Scissors") {
+
+//                      Increment human score by one and display msg
+                        ++humanScore
+                        console.log(`You win! ${humanChoice} beats ${computerChoice}`)
+                        return;
+                }
+
+//              Otherwise:
+                else {
+
+//                      Increment computer score by one and display msg
+                        ++computerScore
+                        console.log(`You lose. ${computerChoice} beats ${humanChoice}`)
+                        return;
+                }
+
+        }
+
+//      If human choise is "Paper":
+        else if (humanChoice === "Paper") {
+
+//              And the computer choice is "Rock":
+                if (computerChoice === "Rock") {
+
+//                      Increment human score by one and display msg
+                        ++humanScore
+                        console.log(`You win! ${humanChoice} beats ${computerChoice}`)
+                        return;
+                }
+
+//              Otherwise:
+                else {
+
+//                      Increment computer score by one and display msg
+                        ++computerScore
+                        console.log(`You lose. ${computerChoice} beats ${humanChoice}`)
+                        return;
+                }
+        }
+
+//      If human choice is "Scissors":
+        else {
+
+//              And the computer choice is "Paper":
+                if (computerChoice === "Paper") {
+
+//                      Increment human score by one and display msg
+                        ++humanScore
+                        console.log(`You win! ${humanChoice} beats ${computerChoice}`)
+                        return;
+                }
+
+//              Otherwise:
+                else {
+
+//                      Increment computer score by one and display msg
+                        ++computerScore
+                        console.log(`You lose. ${computerChoice} beats ${humanChoice}`)
+                        return;
+                }
+        }
+}
