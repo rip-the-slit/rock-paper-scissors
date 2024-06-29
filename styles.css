@@ -1,0 +1,49 @@
+* {
+    font-family: Helvetica, sans-serif;
+    background-color: #2f66dc;
+    color: white;
+}
+
+ul {
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#output {
+    width: 360px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.results {
+    align-self: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.scores {
+    display: flex;
+    justify-content: space-between;
+}
+
+.choices {
+    width: 360px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.choices button {
+    font-size: 20px;
+    padding: 10px 17px;
+    border: 2px solid white;
+    border-radius: 5px;
+}
